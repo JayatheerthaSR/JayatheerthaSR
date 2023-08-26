@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @JayatheerthaSR
 - 👀 I’m interested in software Development
-- 🌱 I’m currently learning Java
+- 🌱 I’m currently learning Web Development (CS50)
 - 💞️ I’m looking to collaborate on LinkedIn
 - 📫 Reach me www.linkedin.com/in/jayatheerthas
 
