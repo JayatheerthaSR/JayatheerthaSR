@@ -3,25 +3,75 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Jayatheertha S Rao — Coming Soon</title>
 
-  <!-- Primary SEO -->
-  <meta name="description" content="Portfolio of Jayatheertha S Rao — frontend web developer. Site coming soon. Connect on LinkedIn, GitHub or freeCodeCamp." />
+  <!-- ======================== -->
+  <!-- SEO & HEAD OPTIMIZATION -->
+  <!-- ======================== -->
+
+  <title>Jayatheertha S Rao | Jayatheertha | Frontend Web Developer</title>
+
+  <meta name="description" content="Official website of Jayatheertha S Rao — frontend web developer specializing in accessible UI and progressive web apps. Portfolio launching soon." />
+  <meta name="keywords" content="jayatheertha, jayatheertha s rao, jayatheerthasr, frontend developer, web developer, accessible UI, progressive web app" />
   <meta name="author" content="Jayatheertha S Rao" />
   <meta name="theme-color" content="#071124" />
 
-  <!-- Social / OpenGraph -->
-  <meta property="og:title" content="Jayatheertha S Rao — Coming Soon" />
-  <meta property="og:description" content="Frontend engineer focused on accessible UI and PWAs. Portfolio launching soon." />
+  <link rel="canonical" href="https://jayatheerthasr.in/" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Jayatheertha S Rao — Frontend Web Developer" />
+  <meta property="og:description" content="Frontend engineering, accessible UI, progressive web apps. Portfolio launching soon." />
+  <meta property="og:url" content="https://jayatheerthasr.in/" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://jayatheerthasr.in/og-image.png" />
+  <meta property="og:image:alt" content="Jayatheertha S Rao — Web Developer" />
   <meta property="og:site_name" content="Jayatheertha S Rao" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:locale" content="en_IN" />
 
-  <!-- Prefetch to speed up external domains if you use them (kept minimal) -->
-  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+  <link rel="alternate" href="https://jayatheerthasr.in/" hreflang="en" />
 
-  <!-- Minimal favicon (SVG data URL). Replace with your asset if preferred. -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='100%' height='100%' fill='%2318253a'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='%23fff' font-family='Arial,Helvetica,sans-serif'>JS</text></svg>">
+  <!-- Structured Data: Person + Website -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://jayatheerthasr.in/#person",
+        "name": "Jayatheertha S Rao",
+        "alternateName": "Jayatheertha",
+        "url": "https://jayatheerthasr.in/",
+        "jobTitle": "Frontend Web Developer",
+        "description": "Frontend web developer specializing in accessible UI and progressive web apps.",
+        "email": "mailto:jayatheerthasr@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/jayatheerthasr",
+          "https://github.com/JayatheerthaSR",
+          "https://www.freecodecamp.org/jayatheerthasr"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://jayatheerthasr.in/#website",
+        "url": "https://jayatheerthasr.in/",
+        "name": "Jayatheertha S Rao",
+        "publisher": { "@id": "https://jayatheerthasr.in/#person" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://jayatheerthasr.in/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='100%' height='100%' fill='%2318253a'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='%23fff' font-family='Arial,Helvetica,sans-serif'>JS</text></svg>'">
+
+  <!-- ======================== -->
+  <!-- STYLES -->
+  <!-- ======================== -->
 
   <style>
     :root{
@@ -45,8 +95,6 @@
         radial-gradient(600px 320px at 90% 90%, rgba(139,225,159,0.03), transparent 8%),
         linear-gradient(180deg, var(--bg), #041020 120%);
       color:#e6f2ff;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
       display:flex;
       align-items:center;
       justify-content:center;
@@ -65,219 +113,151 @@
       gap:26px;
       align-items:center;
     }
-    @media (max-width:920px){ .wrap{grid-template-columns:1fr; padding:20px} }
+    @media (max-width:920px){
+      .wrap{grid-template-columns:1fr; padding:20px}
+    }
 
     .hero{ padding:6px 8px; }
-    .eyebrow{ display:inline-flex; gap:10px; align-items:center; color:var(--accent); font-weight:700; letter-spacing:.4px; font-size:13px; }
-    h1{ margin:12px 0 6px; font-size:30px; line-height:1.02; }
-    p.lead{ color:var(--muted); margin:0 0 16px; font-size:15px; max-width:60ch; }
-
-    .meta{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .eyebrow{ color:var(--accent); font-weight:700; font-size:13px; }
+    h1{ margin:12px 0 6px; font-size:30px; }
+    p.lead{ color:var(--muted); max-width:60ch; font-size:15px; }
 
     .countdown{
       display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;
     }
     .countdown > div{
       background:var(--glass); padding:10px 12px; border-radius:10px; min-width:64px; text-align:center;
-      backdrop-filter: blur(4px);
     }
     .countdown .num{ font-weight:700; font-size:18px; }
-    .countdown .label{ font-size:12px; color:var(--muted); margin-top:6px; }
+    .countdown .label{ font-size:12px; color:var(--muted); }
 
-    /* Right column card */
     .card{
       background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
       border-radius:12px; padding:16px; border:1px solid rgba(255,255,255,0.03);
     }
-    .logo{ display:flex; gap:12px; align-items:center; margin-bottom:12px; }
+    .logo{ display:flex; gap:12px; margin-bottom:12px; }
     .avatar{
-      width:54px; height:54px; border-radius:10px; display:grid; place-items:center; font-weight:800; color:#012b31;
-      background: linear-gradient(135deg,var(--accent),var(--accent-2)); font-size:20px; box-shadow: 0 6px 18px rgba(11,34,44,0.45);
+      width:54px; height:54px; border-radius:10px;
+      display:grid; place-items:center; font-weight:800; color:#012b31;
+      background: linear-gradient(135deg,var(--accent),var(--accent-2));
     }
     .small{ font-size:13px; color:var(--muted); }
 
-    form.subscribe{ margin-top:6px; display:flex; gap:8px; }
-    .subscribe input[type="email"]{
-      flex:1; padding:11px 12px; border-radius:10px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit; font-size:14px;
+    form.subscribe{ display:flex; gap:8px; margin-top:6px; }
+    form.subscribe input{
+      flex:1; padding:11px 12px; border-radius:10px;
+      border:1px solid rgba(255,255,255,0.04);
+      background:transparent; color:inherit;
     }
-    .subscribe button{
-      padding:11px 12px; border-radius:10px; border:0; font-weight:700; background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#002027; cursor:pointer;
+    form.subscribe button{
+      padding:11px 12px;
+      border-radius:10px;
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      border:0; font-weight:700; color:#002027; cursor:pointer;
     }
+
     .links{ display:flex; gap:10px; margin-top:12px; flex-wrap:wrap; }
-    .link{ padding:9px 10px; border-radius:10px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:var(--muted); text-decoration:none; display:inline-flex; gap:8px; align-items:center; font-size:14px; }
+    .link{
+      padding:9px 10px; border-radius:10px; border:1px solid rgba(255,255,255,0.04);
+      text-decoration:none; color:var(--muted); font-size:14px;
+    }
 
-    footer.note{ margin-top:18px; color:var(--muted); font-size:13px; }
-
-    .visually-hidden{ position:absolute!important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; }
-
-    :focus{ outline: 3px solid rgba(106,209,255,0.14); outline-offset:3px; border-radius:6px; }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    .visually-hidden{
+      position:absolute!important; height:1px; width:1px; overflow:hidden;
+      clip:rect(1px,1px,1px,1px); white-space:nowrap;
     }
   </style>
 </head>
-<body>
-  <main class="wrap" role="main" aria-labelledby="main-title">
-    <section class="hero" aria-labelledby="main-title">
-      <div class="eyebrow" aria-hidden="true">🚀 Launching soon</div>
-      <h1 id="main-title">Jayatheertha S Rao</h1>
-      <p class="lead">I build web experiences — front-end engineering, accessible UI and progressive web apps. My portfolio is getting a refresh. Meanwhile, connect on LinkedIn, GitHub or freeCodeCamp.</p>
 
-      <div class="meta" aria-live="polite">
-        <div class="countdown" role="timer" aria-atomic="true" aria-label="Countdown to launch">
-          <div><div class="num" id="cd-days">--</div><div class="label">Days</div></div>
-          <div><div class="num" id="cd-hours">--</div><div class="label">Hours</div></div>
-          <div><div class="num" id="cd-mins">--</div><div class="label">Minutes</div></div>
-          <div><div class="num" id="cd-secs">--</div><div class="label">Seconds</div></div>
-        </div>
+<body>
+  <main class="wrap" role="main">
+    <section class="hero">
+      <div class="eyebrow">🚀 Launching soon</div>
+      <h1>Jayatheertha S Rao</h1>
+      <p class="lead">
+        I build web experiences — front-end engineering, accessible UI and progressive web apps.
+        My portfolio is getting a fresh update.
+      </p>
+
+      <div class="countdown" aria-live="polite">
+        <div><div class="num" id="cd-days">--</div><div class="label">Days</div></div>
+        <div><div class="num" id="cd-hours">--</div><div class="label">Hours</div></div>
+        <div><div class="num" id="cd-mins">--</div><div class="label">Minutes</div></div>
+        <div><div class="num" id="cd-secs">--</div><div class="label">Seconds</div></div>
       </div>
 
       <p class="small" style="margin-top:14px">
         Need something sooner? Email me at
-        <a href="mailto:hello@jayatheerthasr.dev" style="color:var(--accent); text-decoration:underline;">hello@jayatheerthasr.dev</a>
-        — or use the notify form.
+        <a href="mailto:jayatheerthasr@gmail.com" style="color:var(--accent); text-decoration:underline;">
+          jayatheerthasr@gmail.com
+        </a>
       </p>
     </section>
 
-    <aside class="card" aria-label="Contact and links">
-      <div class="logo" role="img" aria-label="Monogram: JS">
-        <div class="avatar" aria-hidden="true">JS</div>
+    <aside class="card">
+      <div class="logo">
+        <div class="avatar">JS</div>
         <div>
           <div style="font-weight:700">Jayatheertha S Rao</div>
-          <div class="small">Web developer — frontend & accessible UI</div>
+          <div class="small">Frontend Web Developer</div>
         </div>
       </div>
 
-      <!-- Replace action with your provider endpoint (Formspree, Netlify Forms, etc.) -->
-      <!-- Example Formspree action: https://formspree.io/f/{your-id} -->
-      <form class="subscribe" id="subscribeForm" action="https://formspree.io/f/your-id" method="POST" novalidate>
+      <!-- Form (mail fallback) -->
+      <form class="subscribe" onsubmit="return subscribe(event)">
         <label for="email" class="visually-hidden">Email address</label>
-        <input id="email" name="email" type="email" placeholder="email@example.com" required autocomplete="email" aria-label="Your email address">
-        <button type="submit" aria-label="Notify me">Notify</button>
+        <input id="email" type="email" placeholder="email@example.com" required>
+        <button type="submit">Notify</button>
       </form>
 
-      <div id="formMessage" class="small" style="margin-top:8px; display:none"></div>
-
-      <nav class="links" aria-label="Social links">
-        <a class="link" href="https://www.linkedin.com/in/jayatheerthasr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a class="link" href="https://github.com/JayatheerthaSR" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="link" href="https://www.freecodecamp.org/jayatheerthasr" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>
+      <nav class="links">
+        <a class="link" href="https://www.linkedin.com/in/jayatheerthasr" target="_blank">LinkedIn</a>
+        <a class="link" href="https://github.com/JayatheerthaSR" target="_blank">GitHub</a>
+        <a class="link" href="https://www.freecodecamp.org/jayatheerthasr" target="_blank">freeCodeCamp</a>
       </nav>
-
-      <footer class="note">
-        <strong>Launch plan:</strong> projects, blog, contact. Replace the Formspree endpoint with your real form provider for real signups.
-      </footer>
     </aside>
   </main>
 
-  <!-- No external libs, small inline script -->
+  <!-- JS -->
   <script>
-    (function () {
-      // CONFIG: set a launch date in ISO format (local time zone). If null -> 30 days from now.
-      const launchDateISO = null; // e.g. "2026-01-15T09:00:00+05:30"
-      const DEFAULT_DAYS = 30;
+    // Countdown
+    (function(){
+      const now = new Date();
+      const launch = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
 
-      const daysEl = document.getElementById('cd-days');
-      const hoursEl = document.getElementById('cd-hours');
-      const minsEl = document.getElementById('cd-mins');
-      const secsEl = document.getElementById('cd-secs');
+      const d = id => document.getElementById(id);
 
-      const now = () => new Date();
-      const launch = launchDateISO ? new Date(launchDateISO) : new Date(+now() + DEFAULT_DAYS * 24 * 60 * 60 * 1000);
+      function tick(){
+        const t = Math.max(0, launch - new Date());
+        const days = Math.floor(t/(1000*60*60*24));
+        const hours = Math.floor((t/(1000*60*60))%24);
+        const mins = Math.floor((t/(1000*60))%60);
+        const secs = Math.floor((t/1000)%60);
 
-      function pad(n){ return String(n).padStart(2,'0'); }
-
-      function updateCountdown(){
-        const t = Math.max(0, launch - now());
-        const days = Math.floor(t / (1000*60*60*24));
-        const hours = Math.floor((t / (1000*60*60)) % 24);
-        const mins = Math.floor((t / (1000*60)) % 60);
-        const secs = Math.floor((t / 1000) % 60);
-
-        daysEl.textContent = pad(days);
-        hoursEl.textContent = pad(hours);
-        minsEl.textContent = pad(mins);
-        secsEl.textContent = pad(secs);
-
-        if (t === 0) {
-          document.querySelector('.lead').textContent = 'The portfolio is live — welcome!';
-          clearInterval(interval);
-        }
+        d('cd-days').textContent = String(days).padStart(2,'0');
+        d('cd-hours').textContent = String(hours).padStart(2,'0');
+        d('cd-mins').textContent = String(mins).padStart(2,'0');
+        d('cd-secs').textContent = String(secs).padStart(2,'0');
       }
-      updateCountdown();
-      const interval = setInterval(updateCountdown, 1000);
-
-      // Form handling: progressive enhancement (works with Formspree or other POST endpoints)
-      const form = document.getElementById('subscribeForm');
-      const msg = document.getElementById('formMessage');
-      form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-        const email = form.email.value && form.email.value.trim();
-        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-          msg.style.display = 'block'; msg.textContent = 'Please enter a valid email address.'; return;
-        }
-
-        // If action is a real POST endpoint (like Formspree) we will POST via fetch.
-        // If you're intentionally using mailto (not recommended), remove this block.
-        const endpoint = form.action || '';
-        if (!endpoint || endpoint.indexOf('http') !== 0) {
-          // fallback: open mail client
-          window.location.href = `mailto:hello@jayatheerthasr.dev?subject=${encodeURIComponent('Notify me')}&body=${encodeURIComponent(email)}`;
-          return;
-        }
-
-        try {
-          const res = await fetch(endpoint, {
-            method: form.method || 'POST',
-            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email })
-          });
-          if (res.ok) {
-            msg.style.display = 'block'; msg.textContent = 'Thanks — you will be notified!';
-            form.reset();
-          } else {
-            msg.style.display = 'block'; msg.textContent = 'Submission failed. Try again later.';
-          }
-        } catch (err) {
-          msg.style.display = 'block'; msg.textContent = 'Network error. Please try again later.';
-        }
-      });
-
-      // Keyboard shortcuts: G then H -> GitHub; G then L -> LinkedIn
-      const LINKS = {
-        github: 'https://github.com/JayatheerthaSR',
-        linkedin: 'https://www.linkedin.com/in/jayatheerthasr'
-      };
-      (function setupKeyboard(){
-        let waiting = false;
-        function handler(e) {
-          if (waiting) {
-            waiting = false;
-            document.removeEventListener('keydown', handler2);
-            return;
-          }
-          if (e.key.toLowerCase() === 'g') {
-            waiting = true;
-            const handler2 = function (ev) {
-              if (ev.key.toLowerCase() === 'h') window.open(LINKS.github, '_blank', 'noopener');
-              if (ev.key.toLowerCase() === 'l') window.open(LINKS.linkedin, '_blank', 'noopener');
-              waiting = false;
-              document.removeEventListener('keydown', handler2);
-            };
-            document.addEventListener('keydown', handler2);
-          }
-        }
-        document.addEventListener('keydown', handler);
-      })();
-
+      tick();
+      setInterval(tick,1000);
     })();
+
+    // Subscribe (mailto)
+    function subscribe(e){
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      if(!email) return;
+
+      const mailto =
+        "mailto:jayatheerthasr@gmail.com"
+        + "?subject=" + encodeURIComponent("Notify me: Portfolio launch")
+        + "&body=" + encodeURIComponent("Please notify me when the portfolio launches.\nMy email: " + email);
+
+      window.location.href = mailto;
+      return false;
+    }
   </script>
 
-  <noscript>
-    <div style="color:#ffdddd;background:#3b1b1b;padding:12px;margin:12px;border-radius:8px;text-align:center;">
-      JavaScript is disabled in your browser — countdown and form may not work. Please enable JavaScript for full experience.
-    </div>
-  </noscript>
 </body>
 </html>
