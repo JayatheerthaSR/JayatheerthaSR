@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <!-- ======================== -->
-  <!-- SEO & HEAD OPTIMIZATION -->
+  <!-- SEO -->
   <!-- ======================== -->
 
   <title>Jayatheertha S Rao | Jayatheertha | Frontend Web Developer</title>
@@ -29,7 +29,7 @@
 
   <link rel="alternate" href="https://jayatheerthasr.in/" hreflang="en" />
 
-  <!-- Structured Data: Person + Website -->
+  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -65,9 +65,13 @@
   }
   </script>
 
-  <!-- Favicon -->
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='100%' height='100%' fill='%2318253a'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='%23fff' font-family='Arial,Helvetica,sans-serif'>JS</text></svg>'">
+  <!-- Favicon (professional SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64'>
+      <rect width='100%' height='100%' rx='12' fill='%2318253a'/>
+      <text x='50%' y='55%' font-size='26' font-weight='700' fill='white' text-anchor='middle' font-family='Inter,Arial'>JS</text>
+    </svg>
+  " />
 
   <!-- ======================== -->
   <!-- STYLES -->
@@ -76,188 +80,152 @@
   <style>
     :root{
       --bg:#071124;
-      --card:#0e1b2b;
       --muted:#9fb0c8;
       --accent:#6ad1ff;
-      --accent-2:#8be19f;
-      --glass: rgba(255,255,255,0.04);
+      --accent2:#8be19f;
+      --glass: rgba(255,255,255,0.05);
       --radius:14px;
-      --max-width:940px;
-      --focus: 3px;
     }
+
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background:
-        radial-gradient(800px 400px at 10% 10%, rgba(106,209,255,0.06), transparent 8%),
-        radial-gradient(600px 320px at 90% 90%, rgba(139,225,159,0.03), transparent 8%),
-        linear-gradient(180deg, var(--bg), #041020 120%);
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto;
+      background:linear-gradient(180deg,#071124,#030b17);
       color:#e6f2ff;
+      padding:40px 18px;
       display:flex;
-      align-items:center;
       justify-content:center;
-      padding:48px 20px;
     }
 
     .wrap{
       width:100%;
-      max-width:var(--max-width);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:var(--radius);
+      max-width:900px;
+      background:rgba(255,255,255,0.03);
+      border-radius:20px;
       padding:32px;
-      box-shadow: 0 10px 40px rgba(2,8,23,0.6);
-      display:grid;
-      grid-template-columns: 1fr 340px;
-      gap:26px;
-      align-items:center;
-    }
-    @media (max-width:920px){
-      .wrap{grid-template-columns:1fr; padding:20px}
+      box-shadow:0 10px 40px rgba(0,0,0,0.4);
     }
 
-    .hero{ padding:6px 8px; }
-    .eyebrow{ color:var(--accent); font-weight:700; font-size:13px; }
-    h1{ margin:12px 0 6px; font-size:30px; }
-    p.lead{ color:var(--muted); max-width:60ch; font-size:15px; }
-
-    .countdown{
-      display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;
-    }
-    .countdown > div{
-      background:var(--glass); padding:10px 12px; border-radius:10px; min-width:64px; text-align:center;
-    }
-    .countdown .num{ font-weight:700; font-size:18px; }
-    .countdown .label{ font-size:12px; color:var(--muted); }
-
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
-      border-radius:12px; padding:16px; border:1px solid rgba(255,255,255,0.03);
-    }
-    .logo{ display:flex; gap:12px; margin-bottom:12px; }
-    .avatar{
-      width:54px; height:54px; border-radius:10px;
-      display:grid; place-items:center; font-weight:800; color:#012b31;
-      background: linear-gradient(135deg,var(--accent),var(--accent-2));
-    }
-    .small{ font-size:13px; color:var(--muted); }
-
-    form.subscribe{ display:flex; gap:8px; margin-top:6px; }
-    form.subscribe input{
-      flex:1; padding:11px 12px; border-radius:10px;
-      border:1px solid rgba(255,255,255,0.04);
-      background:transparent; color:inherit;
-    }
-    form.subscribe button{
-      padding:11px 12px;
+    .countdown{display:flex;gap:12px;margin-top:16px}
+    .countdown div{
+      background:var(--glass);
+      padding:12px;
       border-radius:10px;
-      background:linear-gradient(90deg,var(--accent),var(--accent-2));
-      border:0; font-weight:700; color:#002027; cursor:pointer;
+      min-width:70px;
+      text-align:center;
+    }
+    .num{font-size:20px;font-weight:700}
+
+    .links a{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.1);
+      color:var(--muted);
+      text-decoration:none;
+      margin-right:10px;
+      margin-top:8px;
+      font-size:14px;
     }
 
-    .links{ display:flex; gap:10px; margin-top:12px; flex-wrap:wrap; }
-    .link{
-      padding:9px 10px; border-radius:10px; border:1px solid rgba(255,255,255,0.04);
-      text-decoration:none; color:var(--muted); font-size:14px;
+    /* PROJECTS */
+    #projects .card{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+      padding:16px;
+      border-radius:12px;
     }
-
-    .visually-hidden{
-      position:absolute!important; height:1px; width:1px; overflow:hidden;
-      clip:rect(1px,1px,1px,1px); white-space:nowrap;
+    #projects img{
+      width:100%;
+      height:140px;
+      object-fit:cover;
+      border-radius:10px;
+      margin-bottom:10px;
     }
   </style>
 </head>
 
 <body>
-  <main class="wrap" role="main">
-    <section class="hero">
-      <div class="eyebrow">🚀 Launching soon</div>
-      <h1>Jayatheertha S Rao</h1>
-      <p class="lead">
-        I build web experiences — front-end engineering, accessible UI and progressive web apps.
-        My portfolio is getting a fresh update.
-      </p>
+<div class="wrap">
 
-      <div class="countdown" aria-live="polite">
-        <div><div class="num" id="cd-days">--</div><div class="label">Days</div></div>
-        <div><div class="num" id="cd-hours">--</div><div class="label">Hours</div></div>
-        <div><div class="num" id="cd-mins">--</div><div class="label">Minutes</div></div>
-        <div><div class="num" id="cd-secs">--</div><div class="label">Seconds</div></div>
+  <h1 style="margin:0;font-size:32px">Jayatheertha S Rao</h1>
+  <p style="max-width:520px;color:var(--muted)">Frontend web developer — accessible UI, modern JavaScript, and progressive web apps. My portfolio is getting a fresh update.</p>
+
+  <!-- Countdown -->
+  <div class="countdown">
+    <div><div class="num" id="cd-days">--</div><div>Days</div></div>
+    <div><div class="num" id="cd-hours">--</div><div>Hours</div></div>
+    <div><div class="num" id="cd-mins">--</div><div>Minutes</div></div>
+    <div><div class="num" id="cd-secs">--</div><div>Seconds</div></div>
+  </div>
+
+  <!-- Contact -->
+  <p style="margin-top:18px;color:var(--muted)">
+    Email me at <a href="mailto:jayatheerthasr@gmail.com" style="color:var(--accent)">jayatheerthasr@gmail.com</a>
+  </p>
+
+  <!-- Social Links -->
+  <div class="links">
+    <a href="https://www.linkedin.com/in/jayatheerthasr" target="_blank">LinkedIn</a>
+    <a href="https://github.com/JayatheerthaSR" target="_blank">GitHub</a>
+    <a href="https://www.freecodecamp.org/jayatheerthasr" target="_blank">freeCodeCamp</a>
+  </div>
+
+  <!-- ====================================== -->
+  <!-- PROJECTS SECTION -->
+  <!-- ====================================== -->
+
+  <section id="projects" style="margin-top:40px">
+    <h2 style="font-size:22px;margin-bottom:12px">Projects</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
+
+      <!-- MCA Project -->
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200?text=Banking+App" alt="Banking App Screenshot" />
+        <h3 style="margin:0 0 6px">Banking App — MCA Final Project</h3>
+        <p style="color:var(--muted);font-size:14px;margin-bottom:12px">
+          Full-stack banking system with authentication, transactions, statements and UI dashboard.
+        </p>
+        <a href="https://jayatheerthasr.github.io/MCAfrontEndProject/" target="_blank" style="color:var(--accent)">Frontend Live</a><br>
+        <a href="https://banking-app-gz2p.onrender.com/" target="_blank" style="color:var(--accent2)">Backend API</a><br>
+        <a href="https://github.com/JayatheerthaSR/MCAfrontEndProject" target="_blank" style="color:var(--muted)">Source Code</a>
       </div>
 
-      <p class="small" style="margin-top:14px">
-        Need something sooner? Email me at
-        <a href="mailto:jayatheerthasr@gmail.com" style="color:var(--accent); text-decoration:underline;">
-          jayatheerthasr@gmail.com
-        </a>
-      </p>
-    </section>
+      <!-- Add more project cards here later -->
+    </div>
+  </section>
 
-    <aside class="card">
-      <div class="logo">
-        <div class="avatar">JS</div>
-        <div>
-          <div style="font-weight:700">Jayatheertha S Rao</div>
-          <div class="small">Frontend Web Developer</div>
-        </div>
-      </div>
+</div>
 
-      <!-- Form (mail fallback) -->
-      <form class="subscribe" onsubmit="return subscribe(event)">
-        <label for="email" class="visually-hidden">Email address</label>
-        <input id="email" type="email" placeholder="email@example.com" required>
-        <button type="submit">Notify</button>
-      </form>
+<!-- ======================= -->
+<!-- JS: Countdown + Form -->
+<!-- ======================= -->
 
-      <nav class="links">
-        <a class="link" href="https://www.linkedin.com/in/jayatheerthasr" target="_blank">LinkedIn</a>
-        <a class="link" href="https://github.com/JayatheerthaSR" target="_blank">GitHub</a>
-        <a class="link" href="https://www.freecodecamp.org/jayatheerthasr" target="_blank">freeCodeCamp</a>
-      </nav>
-    </aside>
-  </main>
+<script>
+(function(){
+  const now = new Date();
+  const launch = new Date(now.getTime() + 30*24*60*60*1000);
 
-  <!-- JS -->
-  <script>
-    // Countdown
-    (function(){
-      const now = new Date();
-      const launch = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
+  function update(){
+    const t = Math.max(0, launch - new Date());
+    const d = id => document.getElementById(id);
+    const days = Math.floor(t/(1000*60*60*24));
+    const hours = Math.floor((t/(1000*60*60))%24);
+    const mins = Math.floor((t/(1000*60))%60);
+    const secs = Math.floor((t/1000)%60);
 
-      const d = id => document.getElementById(id);
+    d("cd-days").textContent = String(days).padStart(2,"0");
+    d("cd-hours").textContent = String(hours).padStart(2,"0");
+    d("cd-mins").textContent = String(mins).padStart(2,"0");
+    d("cd-secs").textContent = String(secs).padStart(2,"0");
+  }
 
-      function tick(){
-        const t = Math.max(0, launch - new Date());
-        const days = Math.floor(t/(1000*60*60*24));
-        const hours = Math.floor((t/(1000*60*60))%24);
-        const mins = Math.floor((t/(1000*60))%60);
-        const secs = Math.floor((t/1000)%60);
-
-        d('cd-days').textContent = String(days).padStart(2,'0');
-        d('cd-hours').textContent = String(hours).padStart(2,'0');
-        d('cd-mins').textContent = String(mins).padStart(2,'0');
-        d('cd-secs').textContent = String(secs).padStart(2,'0');
-      }
-      tick();
-      setInterval(tick,1000);
-    })();
-
-    // Subscribe (mailto)
-    function subscribe(e){
-      e.preventDefault();
-      const email = document.getElementById('email').value.trim();
-      if(!email) return;
-
-      const mailto =
-        "mailto:jayatheerthasr@gmail.com"
-        + "?subject=" + encodeURIComponent("Notify me: Portfolio launch")
-        + "&body=" + encodeURIComponent("Please notify me when the portfolio launches.\nMy email: " + email);
-
-      window.location.href = mailto;
-      return false;
-    }
-  </script>
+  update();
+  setInterval(update,1000);
+})();
+</script>
 
 </body>
 </html>
