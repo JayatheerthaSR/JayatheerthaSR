@@ -2,7 +2,7 @@
 - 👀 I’m interested in software Development
 - 🌱 I’m currently learning Web Development (CS50)
 - 💞️ I’m looking to collaborate on LinkedIn
-- 📫 Reach me www.linkedin.com/in/jayatheerthas
+- 📫 Reach me www.linkedin.com/in/jayatheerthasr
 
 
 
